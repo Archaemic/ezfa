@@ -1,0 +1,27 @@
+This is a utility for flashing ROMs to the EZF Advance flash cart for the
+Game Boy Advance using a Nintendo DS. This model of flash cart comes with a
+USB cable to plug the GBA into a computer, and uses the cable to flash the
+cart, but I was given this cart without a cable, so I had to make due without
+the cable. I couldn't find any existing software for flashing this cart, so I
+wrote my own.
+
+It is only tested with one EZF Advance Realtime cartridge, and is unlikely to
+work with any other model without modifications. It may work fine on the
+EZF Advance (non-Realtime) model, but that's likely it.
+
+This is a very basic utility and requires the ROM to be called rom.gba and for
+it to be placed at the root of the filesystem on your DLDI-compatible DS flash
+cart. While I have tested this with my configuration, I can't guarantee this
+won't break your flash cart, so use at your own risk. It does not flash the
+ROM loader/selector that comes on the cart or is loaded by the official
+software. Whatever one ROM you flash is the only thing you'll have on the cart
+after flashing it. Furthermore, flashing to the cart too many times may damage
+the early sectors on the cart and render it unusable, so don't flash too much.
+
+As always, this wasn't created to promote piracy. Rather, I wrote this to
+flash some testing utilities and homebrew that I'd written. I can't stop you
+from using this for piracy, but that wasn't why I wrote this.
+
+You are welcome to use, abuse, or do whatever you want with the provided
+source code. I don't care about attribution; it took me less than three days
+to reverse engineer the EZF Advance software and write this software, anyway.
