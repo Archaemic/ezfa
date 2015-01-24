@@ -22,7 +22,8 @@ void burnRom(const char* inf, int eraseFirst) {
 	vu32* base = (vu32*) 0x08000000;
 
 	while (fread(&word, 4, 1, in)) {
-		if (!eraseFirst && !((int) base & 0x7FFFF)) {
+		if (!eraseFirst && !((int) base & 0x1FFFF)) {
+			printf("Flashing sector at %08lX\n", (u32) base);
 			eraseSector(base);
 		}
 		*first = 0x00aa00aa;
