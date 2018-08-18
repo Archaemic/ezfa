@@ -19,7 +19,7 @@ void burnRom(const char* inf, int eraseFirst) {
 	printf("Flashing ROM...\n");
 	vu32* first = (vu32*) 0x08001554;
 	vu32* second = (vu32*) 0x08000aa8;
-	vu32* base = (vu32*) 0x08000000;
+	vu32* base = (vu32*) 0x08004000;
 
 	while (fread(&word, 4, 1, in)) {
 		if (!eraseFirst && !((int) base & 0x1FFFF)) {
