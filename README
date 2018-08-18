@@ -1,3 +1,13 @@
+FORK NOTES -
+
+I changed the flash offset to start after the ezfa100 rom. The result is a menu
+that only has one option, but multiple flashes should work ok. I am currently
+testing this.
+
+-------------------------------------------------------------------------------
+
+ORIGINAL NOTES -
+
 This is a utility for flashing ROMs to the EZF Advance flash cart for the
 Game Boy Advance using a Nintendo DS. This model of flash cart comes with a
 USB cable to plug the GBA into a computer, and uses the cable to flash the
