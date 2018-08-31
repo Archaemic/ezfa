@@ -8,6 +8,7 @@ static u32 deviceID();
 
 void burnRom(const char* inf, int eraseFirst) {
 
+	printf("Copying menu rom...\n");
 	vu32* start = (vu32*) 0x08000000;
 	u32 *menu = (u32*)malloc(16384);
 	int i = 0;
@@ -25,7 +26,7 @@ void burnRom(const char* inf, int eraseFirst) {
 	}
 	u32 word;
 
-	printf("Flashing ROM...\n");
+	printf("Menu rom copied.\n");
 	vu32* first = (vu32*) 0x08001554;
 	vu32* second = (vu32*) 0x08000aa8;
 	vu32* base = (vu32*) 0x08000000;
