@@ -4,6 +4,9 @@ I am attempting to add support for multiple games. Currently it will do what
 the original version did, but will keep the menu at the beginning. This means
 that currently only one game can be loaded still, but I am working on this.
 
+In the off chance somebody stumbles upon my repo, do not try to use this yet!
+It is not quite usable yet. Still working out a few issues.
+
 -------------------------------------------------------------------------------
 
 ORIGINAL NOTES -
