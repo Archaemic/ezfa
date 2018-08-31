@@ -7,6 +7,15 @@ static void eraseSector(vu32* base);
 static u32 deviceID();
 
 void burnRom(const char* inf, int eraseFirst) {
+
+	vu32* start = (vu32*) 0x08000000;
+	u32 *menu = (u32*)malloc(16384);
+	int i = 0;
+	for (i = 0; i < 4096; i++) {
+		menu[i] = *start;
+		++start;
+	}
+
 	FILE* in = fopen(inf, "rb");
 	if (!in) {
 		return;
@@ -19,7 +28,17 @@ void burnRom(const char* inf, int eraseFirst) {
 	printf("Flashing ROM...\n");
 	vu32* first = (vu32*) 0x08001554;
 	vu32* second = (vu32*) 0x08000aa8;
-	vu32* base = (vu32*) 0x08004000;
+	vu32* base = (vu32*) 0x08000000;
+
+	printf("Flashing menu...\n");
+	eraseSector(base);
+	for (i = 0; i < 4096; i++) {
+		*first = 0x00aa00aa;
+		*second = 0x00550055;
+		*base = menu[i];
+		while (*base != menu[i]);
+		++base;
+	}
 
 	while (fread(&word, 4, 1, in)) {
 		if (!eraseFirst && !((int) base & 0x1FFFF)) {
