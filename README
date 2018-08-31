@@ -1,8 +1,8 @@
 FORK NOTES -
 
-I changed the flash offset to start after the ezfa100 rom. The result is a menu
-that only has one option, but multiple flashes should work ok. I am currently
-testing this.
+I am attempting to add support for multiple games. Currently it will do what
+the original version did, but will keep the menu at the beginning. This means
+that currently only one game can be loaded still, but I am working on this.
 
 -------------------------------------------------------------------------------
 
