@@ -36,6 +36,7 @@ void burnRom(const char* inf, int eraseFirst) {
 	for (i = 0; i < 4096; i++) {
 		*first = 0x00aa00aa;
 		*second = 0x00550055;
+		*first = 0x00a000a0;
 		*base = menu[i];
 		while (*base != menu[i]);
 		++base;
