@@ -1,13 +1,15 @@
 FORK NOTES -
 
-I am attempting to add support for multiple games. Currently it will do what
-the original version did, but will keep the menu at the beginning. This means
-that currently only one game can be loaded still, but I am working on this.
+I have modified this to allow multiple games to be flashed. It requires that
+you still have the original flash card firmware (that when you run the card
+it opens to the EZF Advance menu still). 
 
-In the off chance somebody stumbles upon my repo, do not try to use this yet!
-It is not quite usable yet. Still working out a few issues.
+To use, add .GBA files to a folder named "gba" (all lowercase) on the root of 
+your DS flash card. The names of the games will be taken from the file names, 
+and I have not tested with particularly long file names, but beware of 
+possible issues with that. They can be at most 32 characters. Enjoy!
 
--------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 ORIGINAL NOTES -
 
