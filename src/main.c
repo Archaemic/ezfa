@@ -12,7 +12,7 @@ void burnRom(struct dirent **namelist, int n) {
 	printf("Copying menu rom...\n");
 	vu32* start = (vu32*) 0x08000000;
 	u32 *menu = (u32*)malloc(16384);
-        char *title = (char*)malloc(32);
+	char *title = (char*)malloc(32);
 	int i = 0;
 
 	for (i = 0; i < 4096; i++) {
